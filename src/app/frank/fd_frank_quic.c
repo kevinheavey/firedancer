@@ -186,7 +186,7 @@ run( fd_frank_args_t * args ) {
 
   char const * keylog_file = fd_pod_query_cstr( args->tile_pod, "keylog_file", NULL ); /* optional */
 
-  strncpy( quic_cfg->keylog_file, keylog_file ? keylog_file : "", FD_QUIC_CERT_PATH_LEN );
+  strncpy( quic_cfg->keylog_file, keylog_file ? keylog_file : "", FD_QUIC_PATH_LEN );
 
   /* TODO read IP addresses from interface instead? */
   quic_cfg->net.ip_addr = fd_pod_query_uint( args->tile_pod, "ip_addr", 0 );
