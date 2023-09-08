@@ -26,8 +26,6 @@ jobs:
 
       - uses: dtolnay/rust-toolchain@1.69.0
 
-      - uses: ./.github/actions/deps
-
       - name: Build everything
         run: make -j -Otarget all rust
 

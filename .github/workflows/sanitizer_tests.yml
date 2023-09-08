@@ -14,8 +14,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - uses: ./.github/actions/deps
-
       - name: Build unit tests
         run: make -j -Otarget unit-test
 
@@ -34,8 +32,6 @@ jobs:
       MACHINE: linux_clang_x86_64_ubsan
     steps:
       - uses: actions/checkout@v3
-
-      - uses: ./.github/actions/deps
 
       - name: Build unit tests
         run: make -j -Otarget unit-test
